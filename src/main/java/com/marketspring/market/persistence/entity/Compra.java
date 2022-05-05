@@ -1,7 +1,7 @@
 package com.marketspring.market.persistence.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "compras")
@@ -13,7 +13,7 @@ public class Compra {
     private Integer idCompra;
     @Column(name = "id_cliente")
     private Integer idCliente;
-    private Date fecha;
+    private LocalDateTime fecha;
     @Column(name = "medio_pago")
     private String medioPago;
     private String comentario;
@@ -35,11 +35,11 @@ public class Compra {
         this.idCliente = idCliente;
     }
 
-    public Date getFecha() {
+    public LocalDateTime getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(LocalDateTime fecha) {
         this.fecha = fecha;
     }
 
